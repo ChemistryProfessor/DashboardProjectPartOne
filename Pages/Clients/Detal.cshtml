@@ -1,0 +1,58 @@
+﻿@page
+@model UserDashboardP1.Pages.Clients.DetalModel
+@{
+
+}
+
+
+<br />
+<h2>Detail Client</h2>
+
+<div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Id</label>
+        <div class="col-sm-6">
+            <span type="text" class="form-control">@Model.clients.id</span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Name</label>
+        <div class="col-sm-6">
+            <span type="text" class="form-control">@Model.clients.name</span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-6">
+            <span type="text" class="form-control" >@Model.clients.email</span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Phone</label>
+        <div class="col-sm-6">
+            <span type="text" class="form-control">@Model.clients.phone</span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Address</label>
+        <div class="col-sm-6">
+            <span type="text" class="form-control">@Model.clients.address</span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-dark text-white" href="/Clients/Index" role="button">Back to List</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

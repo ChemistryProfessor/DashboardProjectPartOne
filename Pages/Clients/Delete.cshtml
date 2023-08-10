@@ -1,0 +1,27 @@
+﻿@page
+@using System.Data.SqlClient;
+
+@{
+    try
+    {
+        String id = Request.Query["id"];
+
+        string connectiongString = "Data Source=LAPTOP-8KB21INC;Initial Catalog=UserDashboardP1;Integrated Security=True";
+        using (SqlConnection connection = new SqlConnection(connectiongString))
+        {
+            connection.Open();
+            String sql = "DELETE FROM clients WHERE id=@id";
+
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+    }
+
+    Response.Redirect("/Clients/Index");
+}
